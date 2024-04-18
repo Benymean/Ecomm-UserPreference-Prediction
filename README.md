@@ -1,4 +1,4 @@
-# Portfolio Part 3: E-commerce User Preference Prediction
+# E-commerce User Preference Prediction
 
 This repository delves into the prediction of user preferences within an e-commerce dataset, specifically focusing on whether users 'like' or 'dislike' products.
 
