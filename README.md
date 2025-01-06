@@ -1,53 +1,68 @@
 # E-commerce User Preference Prediction
 
-This repository delves into the prediction of user preferences within an e-commerce dataset, specifically focusing on whether users 'like' or 'dislike' products.
+This project develops predictive models to analyze user preferences in an e-commerce setting. The primary goal is to predict user ratings as binary values: 1 for "like" and 0 for "dislike". Through this classification problem, we explore data preprocessing, feature engineering, and model development with techniques like Logistic Regression and K-Nearest Neighbors (KNN).
 
 ## Table of Contents
-
 1. [Introduction](#introduction)
-2. [Data Exploration & Cleaning](#data-exploration--cleaning)
-3. [Feature Encoding](#feature-encoding)
-4. [Feature Correlations](#feature-correlations)
-5. [Logistic Regression Model](#logistic-regression-model)
-6. [KNN Model & Hyperparameter Tuning](#knn-model--hyperparameter-tuning)
-7. [Conclusion & Model Comparisons](#conclusion--model-comparisons)
-8. [License](#license)
+2. [Dataset Overview](#dataset-overview)
+3. [Project Workflow](#project-workflow)
+4. [Models and Techniques](#models-and-techniques)
+5. [Evaluation Metrics](#evaluation-metrics)
+6. [Results and Insights](#results-and-insights)
+7. [Requirements](#requirements)
+8. [Usage](#usage)
+9. [Citations](#citations)
 
 ## Introduction
+The project involves predicting user preferences for an e-commerce platform by analyzing features and their relationship with user ratings. The target variable, rating, is converted into binary outcomes for simplified classification.
 
-Building upon previous analyses, this notebook concentrates on an e-commerce dataset where user ratings are now binary: 'like' (score 1) or 'dislike' (score 0). The challenge lies in using classification models to predict these binary ratings from other dataset features.
+## Dataset Overview
+The dataset used contains e-commerce user interaction data, including various features that may influence user preferences (e.g., product type, price, user demographics). The rating column serves as the target variable, transformed into binary categories for "like" and "dislike."
 
-## Data Exploration & Cleaning
+## Project Workflow
+1. **Data Exploration and Cleaning**  
+   - Initial dataset inspection to identify anomalies or missing values.  
+   - Data cleaning includes removing abnormal instances and handling missing data.  
 
-The initial steps involve a deep dive into the dataset, understanding its nuances, and ensuring data cleanliness by removing anomalies and handling missing values.
+2. **Feature Encoding**  
+   - Conversion of categorical features to numerical using encoding techniques to prepare data for machine learning models.  
 
-## Feature Encoding
+3. **Correlation Analysis**  
+   - Analysis of feature relationships and their potential impact on the target variable (rating).  
 
-For a more streamlined modeling process, object features in the dataset are encoded into digit features.
+4. **Model Development**  
+   - **Logistic Regression:**  
+     - Splitting the dataset into training and testing sets.  
+     - Training and evaluating a Logistic Regression model for prediction accuracy.  
+   - **K-Nearest Neighbors (KNN):**  
+     - Training and evaluating a KNN model with an initial arbitrary K value.  
+     - Hyperparameter tuning for optimal K value using grid search or cross-validation.  
 
-## Feature Correlations
+5. **Performance Comparison**  
+   - Evaluation of both models to determine strengths and weaknesses.  
 
-This section delves into the relationships between different dataset features, aiding in understanding which might be most influential in predicting user ratings.
+## Models and Techniques
+- **Logistic Regression:**  
+  A linear model for binary classification problems.  
+- **K-Nearest Neighbors (KNN):**  
+  A non-parametric algorithm that predicts outcomes based on the closest data points in feature space.  
 
-## Logistic Regression Model
+## Evaluation Metrics
+- **Accuracy Score:** Measures the proportion of correct predictions.  
+- **Confusion Matrix (optional):** Provides insight into prediction errors for both classes.  
 
-A logistic regression model is trained and evaluated to predict user preferences, offering insights into its performance on the dataset.
+## Results and Insights
+The notebook documents findings from both models, including performance comparisons, strengths, and limitations of each technique.
 
-## KNN Model & Hyperparameter Tuning
+## Requirements
+**Python Libraries:**  
+- numpy  
+- pandas  
+- matplotlib  
+- seaborn  
+- scikit-learn  
 
-In addition to logistic regression, a KNN model is also employed. This section also delves into the effects of different hyperparameters on the model's performance, ensuring optimal configuration for prediction.
-
-## Conclusion & Model Comparisons
-
-A comprehensive comparison between the Logistic Regression and KNN models is provided, focusing on their performance metrics and suitability for this specific dataset.
-
-## Dependencies
-
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- Scikit-learn
-
----
-
+## Usage
+1. Clone this repository:  
+   ```bash
+   git clone https://github.com/benymean/ecomm-user-preference-prediction.git
